@@ -1,0 +1,52 @@
+---
+// src/components/Header.astro
+---
+<header class="header">
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <div class="container header-content">
+    <a href="/" class="logo" aria-label="Ir a la página de inicio">
+      <img src="/images/logo-gma.png" alt="Logo U.E.C Gran Mariscal de Ayacucho" width="60" height="60" />
+      <span class="logo-text">U.E.C GMA</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+      <span class="sr-only">Abrir menú de navegación</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+        <li><a href="/oferta">Oferta Académica</a></li>
+        <li><a href="/noticias">Noticias</a></li>
+        <li><a href="/actividades">Actividades</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<style>
+  .header { background: var(--color-bg-main); border-bottom: 2px solid var(--color-bg-alt); position: sticky; top: 0; z-index: 100; }
+  .container { max-width: 1200px; margin: 0 auto; padding: var(--space-2); display: flex; justify-content: space-between; align-items: center; }
+  .skip-link { position: absolute; top: -40px; left: 0; background: var(--color-primary); color: white; padding: var(--space-1); z-index: 999; }
+  .skip-link:focus { top: 0; }
+  .logo { display: flex; align-items: center; gap: var(--space-1); text-decoration: none; color: var(--color-primary); font-family: var(--font-heading); font-weight: bold; font-size: 1.2rem; }
+  .menu-toggle { background: none; border: none; color: var(--color-primary); cursor: pointer; display: block; padding: var(--space-1); }
+  .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--color-bg-main); padding: var(--space-2); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  .main-nav.is-open { display: block; }
+  .nav-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+  .nav-list a { text-decoration: none; color: var(--color-primary); font-weight: 500; font-size: 1.1rem; }
+  @media (min-width: 768px) {
+    .menu-toggle { display: none; }
+    .main-nav { display: block; position: static; box-shadow: none; padding: 0; background: none; }
+    .nav-list { flex-direction: row; gap: var(--space-3); }
+  }
+</style>
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  toggleBtn?.addEventListener('click', () => {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', !isExpanded);
+    nav?.classList.toggle('is-open');
+  });
+</script>
