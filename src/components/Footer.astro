@@ -14,8 +14,8 @@
       <h3>Síguenos en nuestras redes</h3>
       <div class="social-links">
         
-        <!-- Instagram (Recuerda cambiar AQUI_VA_TU_USUARIO) -->
-        <a href="https://instagram.com/uecgranmariscaldeayacucho" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="icon-instagram">
+        <!-- Instagram (Recuerda cambiar el enlace) -->
+        <a href="https://instagram.com/AQUI_VA_TU_USUARIO" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="icon-instagram">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
 
@@ -77,45 +77,49 @@
     margin-top: var(--space-2);
   }
   
-  /* Estilos base para todos los iconos */
+  /* --- EL NUEVO DISEÑO MODERNO (Efecto Cristal) --- */
   .social-links a {
-    color: white; /* Icono blanco para que resalte en fondos oscuros */
+    /* Fondo transparente y borde sutil */
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 12px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    /* Efecto de desenfoque de fondo (Glassmorphism) */
+    backdrop-filter: blur(4px);
   }
+
+  /* Colores oficiales aplicados directamente a los iconos */
+  .icon-instagram { color: #E1306C; } /* Rosa de Instagram */
+  .icon-tiktok { color: #FFFFFF; }    /* Blanco para que resalte en fondo oscuro */
+  .icon-youtube { color: #FF0000; }   /* Rojo de YouTube */
+  .icon-threads { color: #FFFFFF; }   /* Blanco de Threads */
 
   /* Efecto al pasar el dedo o el mouse */
   .social-links a:hover {
-    transform: translateY(-4px) scale(1.1); /* Se levanta y crece un poco */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    transform: translateY(-5px); /* Salta un poquito */
+    background-color: rgba(255, 255, 255, 0.15); /* El cristal se ilumina */
+    border-color: rgba(255, 255, 255, 0.4);
   }
-
-  /* Colores Reales y Originales de cada Red Social */
-  .icon-instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  }
-  .icon-tiktok {
-    background-color: #000000;
-  }
-  .icon-youtube {
-    background-color: #FF0000;
-  }
-  .icon-threads {
-    background-color: #000000;
-  }
+  
+  /* Efecto de brillo (glow) para cada red al tocarla */
+  .icon-instagram:hover { box-shadow: 0 0 15px rgba(225, 48, 108, 0.5); }
+  .icon-tiktok:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
+  .icon-youtube:hover { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); }
+  .icon-threads:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
 
   .footer-legal {
-    border-top: 1px solid rgba(255,255,255,0.2);
-    padding-top: var(--space-2);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: var(--space-3);
     width: 100%;
-    margin-top: var(--space-2);
-    font-size: 0.8rem;
-    color: #ccc;
+    margin-top: var(--space-3);
+    font-size: 0.85rem;
+    color: #9ca3af;
   }
+  
   @media (min-width: 768px) {
     .footer-container {
       flex-direction: row;
