@@ -45,12 +45,21 @@ import ContactForm from '../components/ContactForm.astro';
 </html>
 
 <style>
-  .hero {
-    background-color: var(--color-primary);
-    color: white;
-    padding: var(--space-6) var(--space-2);
-    text-align: center;
-  }
+   .hero {
+  /* Aquí creamos el degradado y ponemos la imagen de fondo */
+  background-image: linear-gradient(to bottom, rgba(23, 37, 90, 0.4), rgba(23, 37, 90, 1)), url(https://raw.githubusercontent.com/isabellac2301-jpg/Imagenes-web./main/IMG-20261126-WA0020.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: var(--space-6) var(--space-2);
+  text-align: center;
+  min-height: 60vh; /* Hace que la sección sea más alta para que luzca la foto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
   .hero h1 {
     color: white;
     font-size: 2.5rem;
