@@ -14,8 +14,8 @@
       <h3>Síguenos en nuestras redes</h3>
       <div class="social-links">
         
-        <!-- Instagram (Recuerda cambiar el enlace) -->
-        <a href="https://www.instagram.com/uecgranmariscaldeayacucho" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="icon-instagram">
+        <!-- Instagram (Enlace corregido) -->
+        <a href="https://www.instagram.com/uecgranmariscaldeayacucho/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="icon-instagram">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
 
@@ -77,9 +77,8 @@
     margin-top: var(--space-2);
   }
   
-  /* --- EL NUEVO DISEÑO MODERNO (Efecto Cristal) --- */
+  /* --- DISEÑO MODERNO (Efecto Cristal) --- */
   .social-links a {
-    /* Fondo transparente y borde sutil */
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 12px;
@@ -88,24 +87,22 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    /* Efecto de desenfoque de fondo (Glassmorphism) */
     backdrop-filter: blur(4px);
   }
 
-  /* Colores oficiales aplicados directamente a los iconos */
-  .icon-instagram { color: #E1306C; } /* Rosa de Instagram */
-  .icon-tiktok { color: #FFFFFF; }    /* Blanco para que resalte en fondo oscuro */
-  .icon-youtube { color: #FF0000; }   /* Rojo de YouTube */
-  .icon-threads { color: #FFFFFF; }   /* Blanco de Threads */
+  /* Colores oficiales de cada red */
+  .icon-instagram { color: #E1306C; } 
+  .icon-tiktok { color: #FFFFFF; }    
+  .icon-youtube { color: #FF0000; }   
+  .icon-threads { color: #FFFFFF; }   
 
-  /* Efecto al pasar el dedo o el mouse */
+  /* Efecto al tocar */
   .social-links a:hover {
-    transform: translateY(-5px); /* Salta un poquito */
-    background-color: rgba(255, 255, 255, 0.15); /* El cristal se ilumina */
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.4);
   }
   
-  /* Efecto de brillo (glow) para cada red al tocarla */
   .icon-instagram:hover { box-shadow: 0 0 15px rgba(225, 48, 108, 0.5); }
   .icon-tiktok:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
   .icon-youtube:hover { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); }
