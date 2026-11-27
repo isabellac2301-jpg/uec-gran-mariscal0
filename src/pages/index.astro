@@ -17,20 +17,24 @@ import ContactForm from '../components/ContactForm.astro';
   <Header />
 
   <main id="main-content">
+    <!-- Sección de Bienvenida (Hero con la foto de la fachada) -->
     <section class="hero">
       <h1>U.E.C Gran Mariscal de Ayacucho</h1>
       <p>"Lámpara es a mis pies tu palabra y lumbrera a mi camino"</p>
     </section>
 
+    <!-- Sección de Bienvenida breve -->
     <section class="container">
       <h2>Bienvenidos a nuestro Colegio</h2>
       <p style="margin-top: 1rem;">Somos una institución educativa ubicada en Yaguaraparo, Estado Sucre, dedicada a la formación integral de nuestros estudiantes desde 2022.</p>
     </section>
 
+    <!-- Sección de FAQs -->
     <section class="container">
       <FAQ />
     </section>
 
+    <!-- Sección de Contacto -->
     <section class="container">
       <h2>Contáctanos</h2>
       <ContactForm />
@@ -45,55 +49,62 @@ import ContactForm from '../components/ContactForm.astro';
 </html>
 
 <style>
-   .hero {
-  /* 1. Degradado: Empieza casi transparente (0.1) y se vuelve azul sólido (1) al 80% de la altura */
-  background-image: linear-gradient(to bottom, rgba(23, 37, 90, 0.2) 0%, rgba(23, 37, 90, 0.8) 60%, rgba(23, 37, 90, 1) 100%), url('AQUI_PEGA_TU_URL_RAW');
-  background-size: cover;
-  
-  /* 2. Esto enfoca la foto desde arriba, para que no corte el techo del colegio */
-  background-position: center top; 
-  
-  background-repeat: no-repeat;
-  color: white;
-  padding: var(--space-6) var(--space-2);
-  text-align: center;
-  
-  /* 3. Hacemos que la sección sea MÁS ALTA (85% de la pantalla del celular) */
-  min-height: 85vh; 
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 4. Adaptación para Computadoras y Tablets (cuando la pantalla es más ancha) */
-@media (min-width: 768px) {
   .hero {
-    min-height: 90vh; /* Ocupa casi toda la pantalla de la compu */
-    /* En pantallas grandes la foto se ve completa, así que suavizamos el degradado */
-    background-image: linear-gradient(to bottom, rgba(23, 37, 90, 0.1) 0%, rgba(23, 37, 90, 0.7) 70%, rgba(23, 37, 90, 1) 100%), url(https://raw.githubusercontent.com/isabellac2301-jpg/Imagenes-web./main/IMG-20261126-WA0020.jpg);
+    /* Color azul de respaldo por si la imagen tarda en cargar */
+    background-color: #17255A;
+    
+    /* Degradado + TU IMAGEN DE LA FACHADA */
+    background-image: linear-gradient(to bottom, rgba(23, 37, 90, 0.2) 0%, rgba(23, 37, 90, 0.8) 60%, rgba(23, 37, 90, 1) 100%), url('https://raw.githubusercontent.com/isabellac2301-jpg/Imagenes-web./main/IMG-20261126-WA0020.jpg');
+    
+    background-size: cover;
+    background-position: center top; /* Enfoca desde arriba para no cortar el techo */
+    background-repeat: no-repeat;
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+    min-height: 85vh; /* Ocupa el 85% de la pantalla del celular */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-}
+  
   .hero h1 {
     color: white;
     font-size: 2.5rem;
-    margin-bottom: var(--space-2);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra al texto para que resalte más */
   }
+  
   .hero p {
     font-size: 1.2rem;
     font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra al lema */
   }
+  
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--space-5) var(--space-2);
+    padding: 3rem 1rem;
   }
+  
   footer {
-    background-color: var(--color-primary);
+    background-color: #17255A;
     color: white;
     text-align: center;
-    padding: var(--space-3);
-    margin-top: var(--space-4);
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  /* Adaptación para Computadoras y Tablets */
+  @media (min-width: 768px) {
+    .hero {
+      min-height: 90vh; /* En computadora ocupa el 90% de la pantalla */
+      /* Ajustamos el degradado para pantallas grandes */
+      background-image: linear-gradient(to bottom, rgba(23, 37, 90, 0.1) 0%, rgba(23, 37, 90, 0.7) 70%, rgba(23, 37, 90, 1) 100%), url('https://raw.githubusercontent.com/isabellac2301-jpg/Imagenes-web./main/IMG-20261126-WA0020.jpg');
+    }
+    .hero h1 {
+      font-size: 3.5rem; /* Título más grande en computadora */
+    }
   }
 </style>
