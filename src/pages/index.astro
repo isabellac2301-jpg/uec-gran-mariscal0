@@ -1,0 +1,75 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import FAQ from '../components/FAQ.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sitio oficial de la U.E.C Gran Mariscal de Ayacucho en Yaguaraparo, Sucre." />
+  <title>Inicio | U.E.C Gran Mariscal de Ayacucho</title>
+</head>
+<body>
+  <Header />
+
+  <main id="main-content">
+    <section class="hero">
+      <h1>U.E.C Gran Mariscal de Ayacucho</h1>
+      <p>"Lámpara es a mis pies tu palabra y lumbrera a mi camino"</p>
+    </section>
+
+    <section class="container">
+      <h2>Bienvenidos a nuestro Colegio</h2>
+      <p style="margin-top: 1rem;">Somos una institución educativa ubicada en Yaguaraparo, Estado Sucre, dedicada a la formación integral de nuestros estudiantes desde 2022.</p>
+    </section>
+
+    <section class="container">
+      <FAQ />
+    </section>
+
+    <section class="container">
+      <h2>Contáctanos</h2>
+      <ContactForm />
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 U.E.C Gran Mariscal de Ayacucho. Todos los derechos reservados.</p>
+    <p>Yaguaraparo, Estado Sucre - Venezuela</p>
+  </footer>
+</body>
+</html>
+
+<style>
+  .hero {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--space-6) var(--space-2);
+    text-align: center;
+  }
+  .hero h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: var(--space-2);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-5) var(--space-2);
+  }
+  footer {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: var(--space-3);
+    margin-top: var(--space-4);
+  }
+</style>
