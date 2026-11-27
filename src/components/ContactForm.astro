@@ -1,0 +1,45 @@
+---
+// src/components/ContactForm.astro
+---
+<form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+  <input type="hidden" name="form-name" value="contacto" />
+  <p class="hidden-honeypot">
+    <label>No llenar este campo: <input name="bot-field" /></label>
+  </p>
+  <div class="form-group">
+    <label for="nombre">Nombre completo *</label>
+    <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej: María Pérez" />
+  </div>
+  <div class="form-group">
+    <label for="email">Correo electrónico *</label>
+    <input type="email" id="email" name="email" required placeholder="tu@correo.com" />
+  </div>
+  <div class="form-group">
+    <label for="telefono">Teléfono (Opcional)</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="0424-1234567" />
+  </div>
+  <div class="form-group">
+    <label for="asunto">Asunto *</label>
+    <select id="asunto" name="asunto" required>
+      <option value="">Seleccione un asunto...</option>
+      <option value="inscripcion">Información de Inscripción</option>
+      <option value="notas">Solicitud de Notas</option>
+      <option value="otro">Otro</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="mensaje">Mensaje *</label>
+    <textarea id="mensaje" name="mensaje" required minlength="10" rows="5"></textarea>
+  </div>
+  <button type="submit" class="btn-primary">Enviar Mensaje</button>
+</form>
+<style>
+  .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-3); }
+  .hidden-honeypot { display: none; }
+  .form-group { display: flex; flex-direction: column; gap: var(--space-1); }
+  label { font-weight: 600; color: var(--color-primary); }
+  input, select, textarea { padding: var(--space-2); border: 1px solid var(--color-border); border-radius: 4px; font-family: inherit; font-size: 1rem; }
+  input:focus, select:focus, textarea:focus { border-color: var(--color-secondary); outline: 2px solid var(--color-secondary); outline-offset: 1px; }
+  .btn-primary { background-color: var(--color-secondary); color: white; padding: var(--space-2) var(--space-4); border: none; border-radius: 4px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; }
+  .btn-primary:hover { background-color: var(--color-primary); }
+</style>
