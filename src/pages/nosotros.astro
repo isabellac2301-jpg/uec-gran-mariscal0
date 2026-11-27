@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros | U.E.C Gran Mariscal de Ayacucho</title>
+</head>
+<body>
+  <Header />
+  <main class="container">
+    <h1>Sobre Nosotros</h1>
+    
+    <h2>Nuestra Historia</h2>
+    <p>La institución nace en el año 2022, dando inicio al año escolar 2022-2023. Sus primeros pasos comenzaron en las instalaciones de la casa de sus gerentes y fundadores (Yudsibeys Graterol y su esposo Jhon Méndez), habilitando allí las primeras aulas antes de expandirse al espacio actual.</p>
+    
+    <h2>Nuestro Epónimo</h2>
+    <p>El nombre Unidad Educativa Colegio Gran Mariscal de Ayacucho rinde homenaje a figuras históricas de gran relevancia. Por un lado, destaca la figura de Fray Silvestre Zaragoza, personaje muy importante a nivel cultural y religioso en Yaguaraparo, y por otro, al Gran Mariscal de Ayacucho, Antonio José de Sucre, en honor a su destacada trayectoria y legado histórico.</p>
+    
+    <h2>Equipo Directivo</h2>
+    <ul>
+      <li>Odalys Monasterio - Directora</li>
+      <li>Maglene Martínez</li>
+      <li>Aura Brito</li>
+      <li>Mayerlin Alcalá</li>
+    </ul>
+  </main>
+</body>
+</html>
+
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: var(--space-5) var(--space-2); }
+  h1 { margin-bottom: var(--space-4); }
+  h2 { margin-top: var(--space-4); margin-bottom: var(--space-2); color: var(--color-primary); }
+  p { margin-bottom: var(--space-2); line-height: 1.8; }
+  ul { padding-left: var(--space-4); margin-bottom: var(--space-4); }
+</style>
