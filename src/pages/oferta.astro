@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oferta Académica | U.E.C Gran Mariscal de Ayacucho</title>
+</head>
+<body>
+  <Header />
+  <main class="container">
+    <h1>Nuestra Oferta Académica</h1>
+    
+    <section class="nivel">
+      <h2>Educación Inicial / Preescolar</h2>
+      <p><strong>Horario:</strong> Lunes a Viernes de 7:00 am a 11:45 am.</p>
+      <p>Descripción: [PLACEHOLDER] Formación integral para los más pequeños, estimulando sus primeras etapas de desarrollo cognitivo y social.</p>
+    </section>
+
+    <section class="nivel">
+      <h2>Educación Primaria</h2>
+      <p><strong>Horario:</strong> Lunes a Viernes de 7:00 am a 11:45 am.</p>
+      <p>Descripción: [PLACEHOLDER] Acompañamiento pedagógico para consolidar las bases de la lectura, escritura y cálculo matemático.</p>
+    </section>
+
+    <section class="nivel">
+      <h2>Educación Media General / Bachillerato</h2>
+      <p><strong>Horario:</strong> Lunes a Viernes de 12:55 pm a 6:00 pm.</p>
+      <p>Descripción: [PLACEHOLDER] Preparación académica de alto nivel para el ingreso a la educación universitaria y formación ciudadana.</p>
+    </section>
+
+    <div class="cta">
+      <h2>¿Deseas inscribirte?</h2>
+      <p>Contáctanos para más información sobre el proceso de inscripción.</p>
+      <a href="/contacto" class="btn">Ir a Contacto</a>
+    </div>
+  </main>
+</body>
+</html>
+
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: var(--space-5) var(--space-2); }
+  h1 { margin-bottom: var(--space-4); }
+  .nivel { background: var(--color-bg-alt); padding: var(--space-3); margin-bottom: var(--space-3); border-radius: 8px; border-left: 4px solid var(--color-accent-gold); }
+  .nivel h2 { color: var(--color-primary); margin-bottom: var(--space-2); }
+  .nivel p { margin-bottom: var(--space-1); }
+  .cta { text-align: center; margin-top: var(--space-5); padding: var(--space-4); background: var(--color-primary); color: white; border-radius: 8px; }
+  .cta h2 { color: white; }
+  .btn { display: inline-block; margin-top: var(--space-3); padding: var(--space-2) var(--space-4); background: var(--color-accent-gold); color: var(--color-primary); text-decoration: none; font-weight: bold; border-radius: 4px; }
+  .btn:hover { background: var(--color-accent-gold-light); }
+</style>
