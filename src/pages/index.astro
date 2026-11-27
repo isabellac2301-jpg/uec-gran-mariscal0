@@ -46,19 +46,34 @@ import ContactForm from '../components/ContactForm.astro';
 
 <style>
    .hero {
-  /* Aquí creamos el degradado y ponemos la imagen de fondo */
-  background-image: linear-gradient(to bottom, rgba(23, 37, 90, 0.4), rgba(23, 37, 90, 1)), url(https://raw.githubusercontent.com/isabellac2301-jpg/Imagenes-web./main/IMG-20261126-WA0020.jpg);
+  /* 1. Degradado: Empieza casi transparente (0.1) y se vuelve azul sólido (1) al 80% de la altura */
+  background-image: linear-gradient(to bottom, rgba(23, 37, 90, 0.2) 0%, rgba(23, 37, 90, 0.8) 60%, rgba(23, 37, 90, 1) 100%), url('AQUI_PEGA_TU_URL_RAW');
   background-size: cover;
-  background-position: center;
+  
+  /* 2. Esto enfoca la foto desde arriba, para que no corte el techo del colegio */
+  background-position: center top; 
+  
   background-repeat: no-repeat;
   color: white;
   padding: var(--space-6) var(--space-2);
   text-align: center;
-  min-height: 60vh; /* Hace que la sección sea más alta para que luzca la foto */
+  
+  /* 3. Hacemos que la sección sea MÁS ALTA (85% de la pantalla del celular) */
+  min-height: 85vh; 
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* 4. Adaptación para Computadoras y Tablets (cuando la pantalla es más ancha) */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 90vh; /* Ocupa casi toda la pantalla de la compu */
+    /* En pantallas grandes la foto se ve completa, así que suavizamos el degradado */
+    background-image: linear-gradient(to bottom, rgba(23, 37, 90, 0.1) 0%, rgba(23, 37, 90, 0.7) 70%, rgba(23, 37, 90, 1) 100%), url (https://raw.githubusercontent.com/isabellac2301-jpg/Imagenes-web./main/IMG-20261126-WA0020.jpg);
+  }
 }
   .hero h1 {
     color: white;
