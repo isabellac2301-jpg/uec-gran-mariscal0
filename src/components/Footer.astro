@@ -1,3 +1,4 @@
+
 ---
 // src/components/Footer.astro
 ---
@@ -14,10 +15,9 @@
       <h3>Síguenos en nuestras redes</h3>
       <div class="social-links">
         
-        <!-- Instagram (Enlace corregido) -->
-  <a href="https://www.instagram.com/uecgranmariscaldeayacucho/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="icon-instagram">
-
-xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        <!-- Instagram (Enlace exacto y verificado) -->
+        <a href="https://www.instagram.com/uecgranmariscaldeayacucho/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram" class="icon-instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
 
         <!-- TikTok -->
@@ -45,91 +45,27 @@ xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fi
 </footer>
 
 <style>
-  .site-footer {
-    background-color: var(--color-primary);
-    color: white;
-    padding: var(--space-5) var(--space-2) var(--space-3);
-    margin-top: var(--space-5);
-  }
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-4);
-    text-align: center;
-  }
-  .footer-info h3, .footer-social h3 {
-    color: var(--color-accent-gold);
-    margin-bottom: var(--space-1);
-    font-family: var(--font-subheading);
-    letter-spacing: 1px;
-    font-size: 1.5rem;
-  }
-  .footer-info p, .footer-legal p {
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-  }
-  .social-links {
-    display: flex;
-    gap: var(--space-3);
-    justify-content: center;
-    margin-top: var(--space-2);
-  }
+  .site-footer { background-color: var(--color-primary); color: white; padding: var(--space-5) var(--space-2) var(--space-3); margin-top: var(--space-5); }
+  .footer-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: var(--space-4); text-align: center; }
+  .footer-info h3, .footer-social h3 { color: var(--color-accent-gold); margin-bottom: var(--space-1); font-family: var(--font-subheading); letter-spacing: 1px; font-size: 1.5rem; }
+  .footer-info p, .footer-legal p { font-size: 0.9rem; margin-bottom: 0.25rem; }
+  .social-links { display: flex; gap: var(--space-3); justify-content: center; margin-top: var(--space-2); }
   
-  /* --- DISEÑO MODERNO (Efecto Cristal) --- */
-  .social-links a {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 12px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(4px);
-  }
-
-  /* Colores oficiales de cada red */
+  .social-links a { background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); padding: 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; backdrop-filter: blur(4px); }
   .icon-instagram { color: #E1306C; } 
   .icon-tiktok { color: #FFFFFF; }    
   .icon-youtube { color: #FF0000; }   
   .icon-threads { color: #FFFFFF; }   
-
-  /* Efecto al tocar */
-  .social-links a:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.4);
-  }
-  
+  .social-links a:hover { transform: translateY(-5px); background-color: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.4); }
   .icon-instagram:hover { box-shadow: 0 0 15px rgba(225, 48, 108, 0.5); }
   .icon-tiktok:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
   .icon-youtube:hover { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); }
   .icon-threads:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
 
-  .footer-legal {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: var(--space-3);
-    width: 100%;
-    margin-top: var(--space-3);
-    font-size: 0.85rem;
-    color: #9ca3af;
-  }
+  .footer-legal { border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-3); width: 100%; margin-top: var(--space-3); font-size: 0.85rem; color: #9ca3af; }
   
   @media (min-width: 768px) {
-    .footer-container {
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
-    }
-    .footer-legal {
-      text-align: right;
-      border-top: none;
-      padding-top: 0;
-      margin-top: 0;
-      width: auto;
-    }
+    .footer-container { flex-direction: row; justify-content: space-between; text-align: left; }
+    .footer-legal { text-align: right; border-top: none; padding-top: 0; margin-top: 0; width: auto; }
   }
 </style>
