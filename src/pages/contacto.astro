@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | U.E.C Gran Mariscal de Ayacucho</title>
+</head>
+<body>
+  <Header />
+  <main class="container">
+    <h1>Contáctanos</h1>
+    
+    <div class="info">
+      <p><strong>Dirección:</strong> H59C+WGR al lado de comercial la luna, C. Cantaura, Yaguaraparo 6155, Sucre.</p>
+      <p><strong>Teléfono:</strong> 0424-2576868</p>
+      <p><strong>Horario:</strong> Lunes a Viernes de 7:00 am a 6:00 pm</p>
+    </div>
+
+    <div class="formulario">
+      <h2>Envíanos un mensaje</h2>
+      <ContactForm />
+    </div>
+  </main>
+</body>
+</html>
+
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: var(--space-5) var(--space-2); display: flex; flex-direction: column; gap: var(--space-5); }
+  .info { background: var(--color-bg-alt); padding: var(--space-3); border-radius: 8px; border-left: 4px solid var(--color-primary); }
+  .info p { margin-bottom: var(--space-1); }
+</style>
